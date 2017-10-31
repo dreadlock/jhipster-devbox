@@ -15,7 +15,7 @@ locale-gen en_US.UTF-8
 dpkg-reconfigure locales
 
 # install utilities
-apt-get -y install vim git zip bzip2 fontconfig curl language-pack-en
+apt-get -y install vim git zip bzip2 fontconfig curl language-pack-en language-pack-de
 
 # install Java 8
 apt-get install openjdk-8-jdk
@@ -103,6 +103,7 @@ apt-get install -y zsh
 # install oh-my-zsh
 git clone git://github.com/robbyrussell/oh-my-zsh.git /home/vagrant/.oh-my-zsh
 cp /home/vagrant/.oh-my-zsh/templates/zshrc.zsh-template /home/vagrant/.zshrc
+echo "setxkbmap de" >> /home/vagrant/.zshrc
 chsh -s /bin/zsh vagrant
 echo 'SHELL=/bin/zsh' >> /etc/environment
 
